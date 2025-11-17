@@ -14,10 +14,15 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <style>
+        /* GLOBAL FIX: Prevents layout shift/slanting */
+        * {
+            box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+        }
         body {
             font-family: 'Inter', sans-serif;
             background-color: #ffffff; 
             color: #000000;
+            overflow-x: hidden; /* Crucial: Prevents horizontal scrollbar and ensures content doesn't push off-screen */
         }
         .text-primary-mono { color: #000000; } 
         .bg-primary-mono { background-color: #000000; }
